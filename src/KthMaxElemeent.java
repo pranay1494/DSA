@@ -23,7 +23,7 @@ public class KthMaxElemeent {
 
     private int kthMax(int[] arr, int k , int size) {
         for(int i = 0 ; i < k-1; i++){
-            swap(arr,1,size);
+            arr[1] = arr[size];
             size = size - 1;
             maxHeapify(arr,1,size);
         }
