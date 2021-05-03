@@ -3,10 +3,11 @@ import java.util.Arrays;
 public class KthMaxElemeent {
     public static void main(String[] args) {
         KthMaxElemeent element = new KthMaxElemeent();
-        element.findKthLargest(new int[]{3,2,3,1,2,4,5,5,6},9);
+        element.findKthLargest(new int[]{3,2,1,5,6,4},6);
     }
     public void findKthLargest(int[] nums, int k) {
         int[] arr = new int[k+1];
+        int size = k;
 
         for(int i=0; i<k ;i++){
             arr[i+1] = nums[i];
@@ -16,7 +17,7 @@ public class KthMaxElemeent {
 
         System.out.println("nums = " + Arrays.toString(arr) + ", k = " + k );
 
-        int kthMax = kthMax(arr, 4, k);
+        int kthMax = kthMax(arr, 2, size);
 
         System.out.println("nums = " + Arrays.toString(arr) + ", k = " + k + ", Kth max = " + kthMax);
     }
