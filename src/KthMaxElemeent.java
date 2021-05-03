@@ -3,24 +3,23 @@ import java.util.Arrays;
 public class KthMaxElemeent {
     public static void main(String[] args) {
         KthMaxElemeent element = new KthMaxElemeent();
-        element.findKthLargest(new int[]{3,2,1,5,6,4},6);
-    }
-    public void findKthLargest(int[] nums, int k) {
-        int[] arr = new int[k+1];
-        int size = k;
 
-        for(int i=0; i<k ;i++){
+        System.out.println("args = " + element.findKthLargest(new int[]{3,2,1,5,6,4},2));
+    }
+
+    public int findKthLargest(int[] nums, int k) {
+        int[] arr = new int[nums.length+1];
+        int size = nums.length;
+
+        for(int i=0; i< nums.length ;i++){
             arr[i+1] = nums[i];
         }
 
-        buildHeap(arr, k);
+        buildHeap(arr, size);
 
-        System.out.println("nums = " + Arrays.toString(arr) + ", k = " + k );
-
-        int kthMax = kthMax(arr, 2, size);
-
-        System.out.println("nums = " + Arrays.toString(arr) + ", k = " + k + ", Kth max = " + kthMax);
+        return kthMax(arr, k, size);
     }
+
 
     private int kthMax(int[] arr, int k , int size) {
         for(int i = 0 ; i < k-1; i++){
