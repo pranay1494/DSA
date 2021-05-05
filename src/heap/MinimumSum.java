@@ -1,5 +1,10 @@
-import java.util.Arrays;
+package heap;
+
 import java.util.PriorityQueue;
+
+/**
+ * https://www.geeksforgeeks.org/minimum-sum-two-numbers-formed-digits-array-2/
+ */
 
 public class MinimumSum {
     public static void main(String[] args) {
