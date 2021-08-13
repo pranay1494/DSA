@@ -3,6 +3,9 @@ package slidingwindow;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1#
+ */
 public class LongestSubstringwithKDistinctCharacters {
     public static void main(String[] args) {
         LongestSubstringwithKDistinctCharacters characters = new LongestSubstringwithKDistinctCharacters();
@@ -14,7 +17,7 @@ public class LongestSubstringwithKDistinctCharacters {
         int start = 0;
         int ans = -1;
 
-        if (isDistinctAvailable(input) < k) return -1;
+        if (isDistinctAvailable(input) < k) return -1;  //  <------tricky corner case  - >characters.longestkSubstr("aaaaaa",2)
 
         for (int end = 0; end < input.length(); end++) {
             frequency.put(input.charAt(end), frequency.getOrDefault(input.charAt(end),0)+1);
