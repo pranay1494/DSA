@@ -35,6 +35,7 @@ public class KPairsWithSmallestSum {
             }
             queue.add(new int[]{data[0],nums2[index + 1],index+1});
         }
+
         return ans;
     }
 }
