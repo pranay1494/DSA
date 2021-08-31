@@ -61,7 +61,7 @@ public class MaxPathSum {
             return 0;
         int left=findmaxSum(node.left);
         int right=findmaxSum(node.right);
-        return (left>right?left:right)+node.data;
+        return (Math.max(left, right))+node.data;
     }
 
 }
