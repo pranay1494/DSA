@@ -7,7 +7,7 @@ import java.util.Map;
 public class LongestRepeatingCharacterReplacement {
     public static void main(String[] args) {
         LongestRepeatingCharacterReplacement characterReplacement = new LongestRepeatingCharacterReplacement();
-        System.out.println("args = " + characterReplacement.characterReplacement("",1));
+        System.out.println("args = " + characterReplacement.characterReplacement("aabcbd",2));
     }
 
     public int characterReplacement(String s, int k) {
