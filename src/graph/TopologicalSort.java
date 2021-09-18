@@ -41,9 +41,7 @@ public class TopologicalSort {
     }
 
     private static void topoSortUtil(int v, boolean[] visited, List<List<Integer>> adj, Stack<Integer> ans){
-        if(visited[v]) return;
         visited[v] = true;
-
 
         for(int i=0; i<adj.get(v).size();i++){
             if(!visited[adj.get(v).get(i)]){
