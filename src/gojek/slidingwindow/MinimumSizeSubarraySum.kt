@@ -18,6 +18,7 @@ class MinimumSizeSubarraySum {
                 start++
             }
         }
+        // with the current example as ans was not updated as threshold was not reached we need to specially check the ans value and return 0.
         return if (ans == Integer.MAX_VALUE) 0 else ans
     }
 }
