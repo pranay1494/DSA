@@ -29,5 +29,9 @@ public class FindMinimuminRotatedSortedArray {
             }
         }
         return nums[0];
+        // first commit
+        // second commit
+        // third commit
+        // 4th commit
     }
 }
